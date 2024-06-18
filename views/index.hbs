@@ -1,0 +1,49 @@
+{{>header}}
+    <title>All Record</title>
+    
+    
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfw2IjVsS1_7fxJqAiMoOl4AdCd1o4eeNoj1J_pRd-M3vWRKixfBkUWBLN1OVCgXY5WM&usqp=CAU" type="image/x-icon">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfw2IjVsS1_7fxJqAiMoOl4AdCd1o4eeNoj1J_pRd-M3vWRKixfBkUWBLN1OVCgXY5WM&usqp=CAU" type="image/x-icon">
+
+    
+    {{>navbar}}
+    <div class="contaniner">
+        <h1 class="bg-success text-light d-flex justify-content-between align-items-center mt-2 p-2">
+    <span class="mx-auto">CRUD Application</span>
+    <a href="/add" class="text-decoration-none" style=" color: black;">
+        <span class="material-symbols-outlined  border-transparent">insertadd</span>
+    </a>
+</h1>
+
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Designation</th>
+                    <th>City</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {{#each data}}
+                <tr>
+                    <td>{{_id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{age}}</td>
+                    <td>{{salary}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{desig}}</td>
+                    <td>{{city}}</td>
+                    <td><a href='/update/{{_id}}'><span class="material-symbols-outlined">edit</span></a></td>
+                    <td><a href='/delete/{{_id}}'><span class="material-symbols-outlined">delete_forever</span></a></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+    {{>footer}}

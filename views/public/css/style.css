@@ -1,0 +1,14 @@
+.mytable{
+    height: 390px;
+    overflow-y: auto; /*vertically scroll hoga agr content jada hoga*/
+    overflow-x: hidden;/*horizontally scroll hoga,hidden krne se wo dikhega nhi*/
+}
+.icone{
+    color: rgb(166, 225, 250);
+}
+
+
+.material-symbols-outlined:hover {
+    color: gray; /* Change the color when hovered */
+    border-color: gray; /* Change the border color when hovered */
+}
